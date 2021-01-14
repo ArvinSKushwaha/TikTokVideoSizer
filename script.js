@@ -43,7 +43,7 @@ $(async () => {
     const transcode = async ({ target: { files } }) => {
         const { name } = files[0];
         ffmpeg.FS('writeFile', name, await fetchFile(files[0]));
-        await ffmpeg.run('-i', name, '-c:v', 'libvpx', '-speed', '1', '-threads', "" + window.navigator.hardwareConcurrency, '-cpu-used', "" + window.navigator.hardwareConcurrency, 'output.webm');
+        await ffmpeg.run('-i', name, '-c:v', 'libvpx', '-speed', '0', '-threads', "" + window.navigator.hardwareConcurrency, '-cpu-used', "" + window.navigator.hardwareConcurrency, 'output.webm');
         const data = ffmpeg.FS('readFile', 'output.webm');
         const file = new Blob([data.buffer], { type: 'video/webm' });
         file_ = file;

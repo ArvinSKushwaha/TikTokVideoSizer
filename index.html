@@ -27,10 +27,11 @@
                 <td class="border-r-2 text-center w-1/2">
                     <span class="text-3xl">Convert Video Files to <b>WebM</b></span>
                     <br>
-                    <span>We're using multithreaded <font style="color:blue;">FFMPEG</font> in the browser with <span
+                    <span class="w-3/4">We're using multithreaded <font style="color:blue;">FFMPEG</font> in the browser with <span
                             id="numThreads"></span>
                         threads!</span>
-                    <span>Since client-side video conversion can be slow, you can convert your videos through <a href="https://cloudconvert.com/webm-converter" class="font-bold underline" style="color: blue !important;">Cloud Convert</a>!</span>
+                    <br>
+                    <span class="w-3/4">Since client-side video conversion can be slow, you can convert your videos through <a href="https://cloudconvert.com/webm-converter" class="font-bold underline" style="color: blue !important;">Cloud Convert</a>!</span>
                     <br>
                     <br>
                     <br>
@@ -39,9 +40,10 @@
                     <br>
                     <br>
                     <input type="file" id="uploader"><br>
-                    <a href="#" id="download-convert" style="display: none;" class="bg-gray-200 absolute">Download!</a>
-                    <div id="loadingConvert" class="w-1/4 h-4 rounded-full border-2 border-gray-700 absolute hidden">
-                        <div id="loadingBar" class="h-4 bg-green-500 absolute"></div>
+                    <br><br>
+                    <a href="#" target="_blank" id="download-convert" style="display: none;" class="bg-gray-200">Download!</a>
+                    <div id="loadingConvert" class="w-1/2 h-4 rounded fixed hidden">
+                        <div id="loadingBar" class="h-4 bg-green-500 fixed"></div>
                     </div>
 
                 </td>
@@ -58,7 +60,8 @@
                     <br>
                     <br>
                     <input type="file" id="converter"><br>
-                    <a href="#" id="download-resize" style="display: none;" class="bg-gray-200 absolute">Download!</a>
+                    <br><br>
+                    <a href="#" target="_blank" id="download-resize" style="display: none;" class="bg-gray-200">Download!</a>
                 </td>
             </tr>
         </table>
