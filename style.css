@@ -1,0 +1,47 @@
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+table {
+    height: calc(100vh - 5rem);
+}
+
+.border-px {
+    border-width: 1px;
+}
+
+input[type=submit] {
+    top: calc(50% + 80px);
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#loadingConvert {
+    top: 80%;
+    left: 12.5%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+#loadingBar {
+    width: 25vw;
+    margin: 0;
+    padding: 10px 0px;
+    transform: translate(calc(-100% - 2px), -2px);
+}
+
+#download-convert {
+    top: 70%;
+    width: 100px;
+    padding: 7px;
+    left: calc(25% - 50px);
+}
+
+#download-resize {
+    top: 70%;
+    width: 100px;
+    padding: 7px;
+    left: calc(75% - 50px);
+}

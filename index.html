@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Video Resizer</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.9.5/dist/ffmpeg.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <input type="submit" id="piper" value="Pipe Through From Converter"
+        class='p-3 border-black border-px mb-2 rounded-full absolute z-50'>
+    <div class="">
+        <header class="w-full h-20 bg-blue-100 flex m-auto items-center justify-center">
+            <div class="text-5xl montserrat">TikTok Video Resizer</div>
+        </header>
+        <table class="w-full montserrat">
+            <tr>
+                <td class="border-r-2 text-center w-1/2">
+                    <span class="text-3xl">Convert Video Files to <b>WebM</b></span>
+                    <br>
+                    <span>We're using multithreaded <font style="color:blue;">FFMPEG</font> in the browser with <span
+                            id="numThreads"></span>
+                        threads!</span>
+                    <span>Since client-side video conversion can be slow, you can convert your videos through <a href="https://cloudconvert.com/webm-converter" class="font-bold underline" style="color: blue !important;">Cloud Convert</a>!</span>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <input type="file" id="uploader"><br>
+                    <a href="#" id="download-convert" style="display: none;" class="bg-gray-200 absolute">Download!</a>
+                    <div id="loadingConvert" class="w-1/4 h-4 rounded-full border-2 border-gray-700 absolute hidden">
+                        <div id="loadingBar" class="h-4 bg-green-500 absolute"></div>
+                    </div>
+
+                </td>
+                <td class="text-center w-1/2">
+                    <span class="text-3xl">Set <b>WebM</b> Duration To 5 Seconds</span>
+                    <br>
+                    <span>Files remain <b style="color:red;">client-side</b> so security is guaranteed!</span>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <input type="file" id="converter"><br>
+                    <a href="#" id="download-resize" style="display: none;" class="bg-gray-200 absolute">Download!</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- <div id="fileConvert" class="w-full h-1/2 absolute">
+            <input type="file" id="uploader">
+            <a href="#" class="p-2 border-2">Download</a>
+        </div>
+        <div id="timeStamp" class="w-full h-1/2 absolute">
+            <input type="file" id="uploader2">
+            <a href="#" class="p-2 border-2">Download</a>
+        </div> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
